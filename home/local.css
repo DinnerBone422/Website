@@ -1,0 +1,15 @@
+#home-Blurb{
+    width: calc(100% - 5rem - 638px);
+}
+
+#newsletter{
+    width: 550px;
+    min-height: 465px;
+    width: clamp(0px, calc(100vw - 4rem - 20px), 550px);
+}
+
+@media screen and (max-width: 975px) {
+    #home-Blurb, #newsletter{
+        width: calc(100vw - 4rem - 20px);
+    }
+}

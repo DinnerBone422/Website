@@ -1,0 +1,11 @@
+:root {
+    --Width: 100%;
+    --P-Padding: 48px;
+    --P-SinglePadding-2: 31px;
+    --P-SinglePadding-3: 35px;
+    --P-SinglePadding-4: 39px;
+    --P-W-1: calc(var(--Width) - var(--P-Padding));
+    --P-W-2: calc(calc(calc(var(--Width) - var(--P-Padding)) / 2) - var(--P-SinglePadding-2));
+    --P-W-3: calc(calc(calc(var(--Width) - var(--P-Padding)) / 3) - var(--P-SinglePadding-3));
+    --P-W-4: calc(calc(calc(var(--Width) - var(--P-Padding)) / 4) - var(--P-SinglePadding-4));
+}

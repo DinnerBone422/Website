@@ -1,0 +1,236 @@
+/* Import fonts from google fonts:
+    Anton (regular 400),
+    Bungee Shade(regular 400),
+    Stick No Bills(ExtraBold 800),
+    Roboto(Bold 700),
+    Concert One(regular 400)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bungee+Shade&family=Concert+One&family=Roboto:wght@700;900&family=Stick+No+Bills:wght@800&display=swap');
+
+
+/*Variables*/
+:root {
+    /*Colour Scheme
+    colour-1: #127369;
+    colour-2: #10403b;
+    colour-3: #8aa6a3;
+    colour-4: #4c5958;
+    colour-5: #bfbfbf;
+    */
+    --background: rgba(18, 18, 18, 1);                  /*Hex Value: #127369*/
+    --section: rgba(18, 18, 18, 0.5);                   /*Hex Value: #115952*/
+    --section-hover: rgba(18, 18, 18, 0.80);            /*Hex Value: #10403B*/
+    --section-border: rgba(10, 10, 10, 0);              /*Hex Value: #115952*/
+    --section-border-hover: rgba(10, 10, 10, 0);        /*Hex Value: #115952*/
+    --text: rgba(200, 200, 200, 1);                     /*Hex Value: #FFFFFF*/
+    --text-hover: rgba(255, 255, 255, 1);               /*Hex Value: #C0C0C0*/
+    --link: rgba(125, 125, 125, 1);                     /*Hex Value: #FFFFFF*/
+    --link-hover: rgba(255, 255, 255, 1);               /*Hex Value: #C0C0C0*/
+}
+
+
+/*animations*/
+@keyframes Fade-in {
+    0%{
+        color: rgba(0, 0, 0, 1);
+    }
+    100%{
+        color: rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes float-Nav{
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-15px);
+    }
+    75% {
+        transform: translateY(15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes float-Footer{
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(-7.5px);
+    }
+    75% {
+        transform: translateY(7.5px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+
+html{
+    /*Set Background*/
+    background-image: url("Assets/Local/Backgrounds/Background.jpg");
+    background-color: var(--background);
+    overflow-x: hidden;
+}
+
+/*Classes*/
+/*Sections*/
+.section{
+    margin: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    color: var(--text);
+    background-color: var(--section);
+    border-radius: 1rem;
+    border: 10px solid rgba(200, 0, 120, 0);
+    box-shadow: 15px 15px 10px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 15px 15px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 15px 15px 10px 0px rgba(0,0,0,0.75);
+}
+
+.section:hover{
+    transform: scale(10px);
+    background-color: var(--section-hover);
+    border: 10px solid var(--section-border-hover);
+}
+
+
+/*Flex Containers*/
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+}
+
+.flex-child{
+    display: block;  
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+}
+
+
+/*Grid*/
+@media screen and (min-width: 600px) {
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    }
+}
+
+.grid-child{
+    height: 85%;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+
+/*Game Pages*/
+.game-Canvas{
+    text-align: center;
+}
+
+
+/*Tags*/
+ion-icon{
+    font-size: 2.25rem;
+}
+
+h1{
+    font-family: 'Bungee Shade', 'stick no bills', 'concert one', cursive;
+    font-weight: 800;
+    animation: Fade-in 2.5s;
+    color: transparent;
+    background: linear-gradient(45deg, rgb(245, 0, 0), rgb(0, 0, 255));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    font-size: 4rem;
+    line-height: 1;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-family: 'anton';
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+p{
+    font-size: 1.25rem;
+    font-family: 'roboto';
+    font-weight: 900;
+}
+
+a{
+    color: var(--link);
+    transition: color 0.5s;
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--link-hover);
+}
+
+
+/*Title*/
+header{
+    display: grid;
+    place-content: center;
+    text-align: center;
+    height: calc(100vh - 4.5rem - 20px);
+    overflow: hidden;
+}
+
+header h1{
+    font-size: 14vw;
+    line-height: 1.025;
+    animation: Fade-in 2.5s;
+}
+
+
+/*Navigation*/
+nav a{
+    color: var(--link);
+    font-size: 1.5rem;
+    animation: none;
+    animation: float-Nav 5s ease-in-out infinite;
+    text-decoration: none;
+}
+
+nav a:hover{
+    animation: float-Nav 0s ease-in-out infinite;
+}
+
+#Home-Icon{
+    transform: translateY(7px);
+}
+
+#About-Me-Icon{
+    transform: translateY(8px);
+}
+
+#My-Projects-Icon{
+    transform: translateY(7px);
+}
+
+
+/*Footer*/
+footer a{
+    margin: 0 2%;
+    animation: float-Footer 5s ease-in-out infinite;
+}
+
+footer a:hover{
+    animation: float-Footer 0s ease-in-out infinite;
+}
