@@ -1,1 +1,0 @@
-alert("Some of The projects are currently down due to them still being moved from www.johaan.tk to www.johaan.org");
