@@ -39,38 +39,6 @@
     }
 }
 
-@keyframes float-Nav{
-    0% {
-        transform: translateY(0px);
-    }
-    25% {
-        transform: translateY(-15px);
-    }
-    75% {
-        transform: translateY(15px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-@keyframes float-Footer{
-    0% {
-        transform: translateY(0px);
-    }
-    25% {
-        transform: translateY(-7.5px);
-    }
-    75% {
-        transform: translateY(7.5px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-
-
 html{
     /*Set Background*/
     background-image: url("Assets/Local/Backgrounds/Background.jpg");
@@ -203,13 +171,7 @@ header h1{
 nav a{
     color: var(--link);
     font-size: 1.5rem;
-    animation: none;
-    animation: float-Nav 5s ease-in-out infinite;
     text-decoration: none;
-}
-
-nav a:hover{
-    animation: float-Nav 0s ease-in-out infinite;
 }
 
 #Home-Icon{
@@ -228,9 +190,4 @@ nav a:hover{
 /*Footer*/
 footer a{
     margin: 0 2%;
-    animation: float-Footer 5s ease-in-out infinite;
-}
-
-footer a:hover{
-    animation: float-Footer 0s ease-in-out infinite;
 }
