@@ -125,25 +125,28 @@ h1{
     font-size: 4rem;
     line-height: 1;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 h2{
     font-family: 'anton';
     font-weight: 500;
     font-size: 2rem;
+    margin: 20px 0 0 0;
 }
 
-h2{
+h3{
     font-family: 'anton';
     font-weight: 500;
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+    margin: 20px 0px 0px 0px;
 }
 
 p{
     font-size: 1.25rem;
     font-family: 'roboto';
     font-weight: 900;
+    margin: 0px;
 }
 
 a{
