@@ -134,6 +134,12 @@ h2{
     font-size: 2rem;
 }
 
+h2{
+    font-family: 'anton';
+    font-weight: 500;
+    font-size: 1.75rem;
+}
+
 p{
     font-size: 1.25rem;
     font-family: 'roboto';
