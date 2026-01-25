@@ -1,0 +1,14 @@
+#Resume-Left-Side{
+    width: calc(100% - 5rem - 638px);
+}
+
+#Resume-Right-Side{
+    width: 550px;
+    width: clamp(0px, calc(100vw - 4rem - 20px), 550px);
+}
+
+@media screen and (max-width: 975px) {
+    #Resume-Left-Side, #Resume-Right-Side{
+        width: calc(100vw - 4rem - 20px);
+    }
+}
